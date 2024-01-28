@@ -33,7 +33,7 @@ namespace prInteresCompuesto
             this.btnsalir = new System.Windows.Forms.Button();
             this.btnnuevo = new System.Windows.Forms.Button();
             this.btncalcular = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txttiempo = new System.Windows.Forms.TextBox();
             this.txtrazon = new System.Windows.Forms.TextBox();
             this.txtcapital = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,7 +44,6 @@ namespace prInteresCompuesto
             this.txttotalinteres = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -55,15 +54,15 @@ namespace prInteresCompuesto
             this.groupBox1.Controls.Add(this.btnsalir);
             this.groupBox1.Controls.Add(this.btnnuevo);
             this.groupBox1.Controls.Add(this.btncalcular);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.txttiempo);
             this.groupBox1.Controls.Add(this.txtrazon);
             this.groupBox1.Controls.Add(this.txtcapital);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(44, 62);
+            this.groupBox1.Location = new System.Drawing.Point(41, 23);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(556, 201);
+            this.groupBox1.Size = new System.Drawing.Size(513, 250);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Interes";
@@ -75,7 +74,7 @@ namespace prInteresCompuesto
             this.btnsalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsalir.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.btnsalir.ForeColor = System.Drawing.Color.White;
-            this.btnsalir.Location = new System.Drawing.Point(358, 132);
+            this.btnsalir.Location = new System.Drawing.Point(323, 182);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(139, 47);
             this.btnsalir.TabIndex = 8;
@@ -89,12 +88,13 @@ namespace prInteresCompuesto
             this.btnnuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnnuevo.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.btnnuevo.ForeColor = System.Drawing.Color.White;
-            this.btnnuevo.Location = new System.Drawing.Point(358, 79);
+            this.btnnuevo.Location = new System.Drawing.Point(178, 182);
             this.btnnuevo.Name = "btnnuevo";
             this.btnnuevo.Size = new System.Drawing.Size(139, 47);
             this.btnnuevo.TabIndex = 7;
             this.btnnuevo.Text = "Nuevo";
             this.btnnuevo.UseVisualStyleBackColor = false;
+            this.btnnuevo.Click += new System.EventHandler(this.btnnuevo_Click_1);
             // 
             // btncalcular
             // 
@@ -103,7 +103,7 @@ namespace prInteresCompuesto
             this.btncalcular.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btncalcular.Font = new System.Drawing.Font("Segoe UI", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.btncalcular.ForeColor = System.Drawing.Color.White;
-            this.btncalcular.Location = new System.Drawing.Point(358, 26);
+            this.btncalcular.Location = new System.Drawing.Point(33, 182);
             this.btncalcular.Name = "btncalcular";
             this.btncalcular.Size = new System.Drawing.Size(139, 47);
             this.btncalcular.TabIndex = 6;
@@ -111,15 +111,16 @@ namespace prInteresCompuesto
             this.btncalcular.UseVisualStyleBackColor = false;
             this.btncalcular.Click += new System.EventHandler(this.btncalcular_Click);
             // 
-            // textBox3
+            // txttiempo
             // 
-            this.textBox3.BackColor = System.Drawing.Color.SeaShell;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Location = new System.Drawing.Point(108, 132);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(185, 23);
-            this.textBox3.TabIndex = 5;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.txttiempo.BackColor = System.Drawing.Color.SeaShell;
+            this.txttiempo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txttiempo.Location = new System.Drawing.Point(108, 132);
+            this.txttiempo.Name = "txttiempo";
+            this.txttiempo.PlaceholderText = "Periodo de tiempo en relación a la tasa de interés";
+            this.txttiempo.Size = new System.Drawing.Size(302, 23);
+            this.txttiempo.TabIndex = 5;
+            this.txttiempo.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtrazon
             // 
@@ -127,7 +128,8 @@ namespace prInteresCompuesto
             this.txtrazon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtrazon.Location = new System.Drawing.Point(108, 81);
             this.txtrazon.Name = "txtrazon";
-            this.txtrazon.Size = new System.Drawing.Size(185, 23);
+            this.txtrazon.PlaceholderText = "Tasa en formato decimal (por ejemplo, 0.05 para el 5%)";
+            this.txtrazon.Size = new System.Drawing.Size(302, 23);
             this.txtrazon.TabIndex = 4;
             this.txtrazon.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -137,7 +139,8 @@ namespace prInteresCompuesto
             this.txtcapital.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtcapital.Location = new System.Drawing.Point(108, 33);
             this.txtcapital.Name = "txtcapital";
-            this.txtcapital.Size = new System.Drawing.Size(185, 23);
+            this.txtcapital.PlaceholderText = "Cantidad a invertir";
+            this.txtcapital.Size = new System.Drawing.Size(302, 23);
             this.txtcapital.TabIndex = 3;
             // 
             // label4
@@ -181,9 +184,9 @@ namespace prInteresCompuesto
             this.groupBox2.Controls.Add(this.txttotalinteres);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Location = new System.Drawing.Point(44, 280);
+            this.groupBox2.Location = new System.Drawing.Point(41, 291);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(556, 132);
+            this.groupBox2.Size = new System.Drawing.Size(513, 132);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             // 
@@ -191,7 +194,7 @@ namespace prInteresCompuesto
             // 
             this.txtmontofinal.BackColor = System.Drawing.Color.SeaShell;
             this.txtmontofinal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtmontofinal.Location = new System.Drawing.Point(312, 68);
+            this.txtmontofinal.Location = new System.Drawing.Point(277, 68);
             this.txtmontofinal.Name = "txtmontofinal";
             this.txtmontofinal.Size = new System.Drawing.Size(185, 23);
             this.txtmontofinal.TabIndex = 7;
@@ -211,7 +214,7 @@ namespace prInteresCompuesto
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.Green;
-            this.label6.Location = new System.Drawing.Point(286, 44);
+            this.label6.Location = new System.Drawing.Point(251, 44);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(249, 21);
             this.label6.TabIndex = 4;
@@ -228,25 +231,12 @@ namespace prInteresCompuesto
             this.label5.TabIndex = 3;
             this.label5.Text = "Total de Interés:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(152, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(354, 32);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "ESTRUCTURAS SECUENCIALES";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(648, 430);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(600, 461);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
@@ -260,7 +250,6 @@ namespace prInteresCompuesto
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -268,11 +257,10 @@ namespace prInteresCompuesto
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txttiempo;
         private System.Windows.Forms.TextBox txtrazon;
         private System.Windows.Forms.TextBox txtcapital;
         private System.Windows.Forms.Button btnnuevo;

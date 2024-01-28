@@ -4,6 +4,12 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net5.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyName>prInteresCompuesto</AssemblyName>
+    <Authors>Ingeniero Engels Cárcamo</Authors>
+    <Description>formulario para calcular el interés compuesto</Description>
+    <PackageProjectUrl>https://engelscarcamo.netlify.app/</PackageProjectUrl>
+    <Company />
   </PropertyGroup>
 
 </Project>
