@@ -22,30 +22,6 @@ namespace prInteresCompuesto
             MessageBox.Show("¡Bienvenido al formulario!");
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnsalir_Click(object sender, EventArgs e)
         {
@@ -93,11 +69,6 @@ namespace prInteresCompuesto
                     LimpiarControles(control.Controls);
                 }
             }
-        }
-
-        private void toolTip1_Popup(object sender, PopupEventArgs e)
-        {
-            txttiempo.Text = "hola";
         }
     }
 }

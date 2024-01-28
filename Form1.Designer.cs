@@ -66,7 +66,7 @@ namespace prInteresCompuesto
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Interes";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+      
             // 
             // btnsalir
             // 
@@ -120,7 +120,7 @@ namespace prInteresCompuesto
             this.txttiempo.PlaceholderText = "Periodo de tiempo en relación a la tasa de interés";
             this.txttiempo.Size = new System.Drawing.Size(302, 23);
             this.txttiempo.TabIndex = 5;
-            this.txttiempo.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+   
             // 
             // txtrazon
             // 
@@ -131,7 +131,7 @@ namespace prInteresCompuesto
             this.txtrazon.PlaceholderText = "Tasa en formato decimal (por ejemplo, 0.05 para el 5%)";
             this.txtrazon.Size = new System.Drawing.Size(302, 23);
             this.txtrazon.TabIndex = 4;
-            this.txtrazon.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+
             // 
             // txtcapital
             // 
@@ -207,7 +207,7 @@ namespace prInteresCompuesto
             this.txttotalinteres.Name = "txttotalinteres";
             this.txttotalinteres.Size = new System.Drawing.Size(185, 23);
             this.txttotalinteres.TabIndex = 6;
-            this.txttotalinteres.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+
             // 
             // label6
             // 
