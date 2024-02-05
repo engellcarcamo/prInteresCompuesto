@@ -1,7 +1,7 @@
 # Formulario de Windows con .NET y C#
 
 ## Un formulario de Windows en .NET con C# es una interfaz gráfica de usuario basado en controles,  propiedades y eventos que puedes crear utilizando la tecnología Windows Forms (WinForms).
-![Resources/formulario.png](resources/formulario.png) 
+![Resources/formulario.png](Resources/formulario.png) 
 
 - En este repositorio realizo un formulario para calcular el interés compuesto usando la formula M=(1+r%)^t × C ; donde:
 
@@ -21,7 +21,7 @@ Donde:
     M = (1.157625) * 1000 = $1,157.625
 
 ```
- ![Resources/formulario.png](resources/formulario2.png) 
+ ![Resources/formulario.png](Resources/formulario2.png) 
 
  - El botón **Calcular** tiene el evento click asociado y la lógica que aplica la fórmula, el botón **Nuevo** permite vaciar los controles de entrada conocidos como TextBox y botón **Salir** unicamente tiene un método asociado para cerrar la aplicación *Close().*
 
@@ -81,7 +81,7 @@ private void btncalcular_Click(object sender, EventArgs e)
 ```
 
 
-![logo](resources/logo.png)
+![logo](Resources/logo.png)
 
 - **Nombre:** Engels Cárcamo
 - **Correo Electrónico:** engelscarcamo59@gmail.com
